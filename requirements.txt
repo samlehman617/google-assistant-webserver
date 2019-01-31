@@ -1,0 +1,11 @@
+google-assistant-library
+google-auth
+requests_oauthlib
+cherrypi
+flask
+flask-jsonpify
+flask-restful
+grpcio
+google-assistant-grpc
+google-auth-oauthlib
+
