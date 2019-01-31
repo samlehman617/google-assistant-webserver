@@ -7,7 +7,8 @@ RUN apt-get update -qq > /dev/null \
                             python3 python3-dev python3-pip \
                             python3-six python3-pyasn1 \
                             libportaudio2 alsa-utils
-RUN pip3 install --upgrade pip wheel \
+RUN pip3 install --upgrade pip \
+    && pip3 install --upgrade wheel \
     && pip3 install --upgrade six \
     && pip3 install --upgrade google-assistant-library google-auth requests_oauthlib \
                             cherrypy flask flask-jsonpify flask-restful \
