@@ -8,9 +8,8 @@ RUN apt-get update -qq > /dev/null \
                             python3-six python3-pyasn1 \
                             libportaudio2 alsa-utils
 RUN pip3 install --upgrade pip \
-    && pip3 install --upgrade wheel \
-    && pip3 install --upgrade six \
-    && pip3 install --upgrade google-assistant-library google-auth requests_oauthlib \
+RUN pip3 install --upgrade six \
+RUN pip3 install --upgrade google-assistant-library google-auth requests_oauthlib \
                             cherrypy flask flask-jsonpify flask-restful \
                             grpcio google-assistant-grpc google-auth-oauthlib
 RUN apt-get remove -y --purge python3-pip python3-dev \
