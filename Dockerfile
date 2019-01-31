@@ -7,7 +7,7 @@ COPY requirements.txt /
 # Install packages
 RUN apt-get update -qq > /dev/null \
     && apt-get install -yqq jq tzdata \
-                            python3.6 python3.6-dev python3-pip \
+                            python3 python3-dev python3-pip \
                             python3-six python3-pyasn1 \
                             libportaudio2 alsa-utils
 RUN pip3 install --upgrade pip \
