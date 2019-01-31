@@ -1,4 +1,4 @@
-ARG BUILD_FROM
+ARG BUILD_FROM=multiarch/debian-debootstrap:armhf-stretch
 FROM $BUILD_FROM
 
 # Install packages
