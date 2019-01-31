@@ -1,4 +1,5 @@
 #!/bin/bash
+
 set -e
 
 CONFIG_PATH=/data/options.json
@@ -21,4 +22,5 @@ elif [ ! -f "$CRED_JSON" ]; then
     exit 1
 fi
 
+echo "Running Google Assistant Service..."
 exec python3 /hassio_gassistant.py "$CRED_JSON" < /dev/null
