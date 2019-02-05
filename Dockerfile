@@ -5,11 +5,11 @@ ARG BUILD_VERSION
 FROM $BUILD_FROM
 
 # Install packages
-RUN apt-get update
-RUN apt-get install -y jq tzdata python3 python3-dev python3-pip \
+RUN apt-get -qq update
+RUN apt-get install -yqq jq tzdata python3 python3-dev python3-pip \
   python3-six python3-pyasn1 libportaudio2 alsa-utils
-RUN pip3 install --upgrade pip
-RUN pip3 install --upgrade six
+RUN pip3 install --quiet --upgrade pip
+RUN pip3 install --quiet --upgrade six
 RUN pip3 install --upgrade google-assistant-library google-auth \
   requests_oauthlib cherrypy flask flask-jsonpify flask-restful \
   grpcio google-assistant-grpc google-auth-oauthlib
