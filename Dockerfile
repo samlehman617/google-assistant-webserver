@@ -1,4 +1,7 @@
 ARG BUILD_FROM
+ARG BUILD_DATE
+ARG BUILD_REF
+ARG BUILD_VERSION
 FROM $BUILD_FROM
 
 # Install packages
@@ -21,3 +24,14 @@ COPY *.py /
 RUN chmod a+x /run.sh
 
 ENTRYPOINT [ "/run.sh" ]
+
+LABEL \
+  maintainer="Sam Lehman <samlehman617@gmail.com" \
+  org.label-schema.description="Google Assistant Webserver to make RESTful requests to." \
+  org.label-schema.build-date=${BUILD_DATE} \
+  org.label-schema.name="Google Assistant Webserver" \
+  org.label-schema.url="https://github.com/samlehman617/google-assistant-webserver" \
+  org.label-schema.vcs-ref=${BUILD_REF} \
+  org.label-schema.vcs-url="https://github.com/samlehman617/google-assistant-webserver" \
+  org.label-schema.vendor="Sam Lehman" \
+  org.label-schema.version=${BUILD_VERSION}
